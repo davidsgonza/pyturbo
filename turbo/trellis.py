@@ -20,7 +20,8 @@ class Trellis:
              [(0, 0), (1, -1), (0, 0), (-1, 1)]])
 
         # Convertir los elementos con tuplas a tuplas con valores de 0
-        self.transition_matrix = np.array([[tuple(0 if el == (0, 0) else el) for el in row] for row in self.transition_matrix])
+        #self.transition_matrix = np.array([[tuple(0 if el == (0, 0) else el) for el in row] for row in self.transition_matrix])
+        #self.transition_matrix = np.array([[tuple(0 if np.array_equal(el, (0, 0)) else el) for el in row] for row in self.transition_matrix])
 
 
         self.past_states = [(0, 1), (2, 3), (0, 1), (2, 3)]
